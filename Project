@@ -1,0 +1,63 @@
+list_names= ['Duygu Bayar','Ali Cem Göçer','Sadık Şener','Akın Deniz','Alperen Yılmaz']
+list_lessons = ['Maths', 'Science', 'Articifial Intelligence',
+ 'C Programming','Programming Languages']
+print('Enter your name :)')
+cnt=3
+for i in list_names:
+    if(cnt>0):
+        name_surname = input()
+        if(name_surname==i):
+            print('Welcome',name_surname)
+            break
+        else:
+            print('Geçersiz isim yazdınız.Lütfen tekrar deneyiniz.')
+            print('Kalan deneme hakkınız:',cnt-1)
+            cnt-=1
+    else:
+        print('Deneme Hakkınız bitti.Lütfen daha sonra tekrar deneyiniz.')
+        exit
+print('Eklemek istediğiniz dersin adını giriniz')
+print('Alacağınız dersleri girdikten sonra -1 giriniz.')
+Lessons=[]
+a=input()
+Lessons.append(a)
+for i in Lessons:
+    if(i != '-1'):
+        print('Eklemek istediğiniz dersin adını giriniz')
+        a=input()
+        Lessons.append(a)
+
+if(len(Lessons)>6):
+        print('You Failed in class')
+elif(len(Lessons)<4):
+    print('You Failed in class')
+else:
+    dict_grades={'midterm':'','final':'','project':''}
+    print('choose your course')
+    a=input()
+    print('enter your midterm grades ')
+    b=int(input())
+    dict_grades['midterm']=b
+    print('enter your final grades ')
+    c=int(input())
+    dict_grades['final']=c
+    print('enter your project grades ')
+    d=int(input())
+    dict_grades['project']=d
+
+    note = (b*0.3)+(c*0.5)+(d*0.2)
+
+    if(note>=90):
+        print("AA")
+    elif(note>=70):
+        print("BB")
+    elif(note>=50):
+        print("CC")
+    elif(note>=30):
+        print("DD")
+    else:
+        print("FF")
+
+
+       
+
